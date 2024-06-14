@@ -87,3 +87,28 @@ def alterar(categoria, item_atual, item_novo):
             print(f"Item '{item_atual}' alterado para '{item_novo}' com sucesso.")
         else:
             print(f"O item '{item_atual}' não existe na categoria '{categoria}'.")
+            if opcao == 4: 
+            categoria_ = input("Digite a categoria do item que deseja buscar: ").lower()
+            item_ = input("Digite o nome do item que deseja buscar: ").lower()
+            retorno = get_key(categoria_, item_)
+            if retorno is not None:
+                    resultado, valor = retorno
+                    print(f"item: {resultado}, valor: {valor}")
+            else:
+                print(retorno)
+
+        if opcao == 5:
+            print('Cardapio atual = ', cardapio)
+            
+
+        elif opcao == 6:
+            print("programa encerrado!")
+            break
+
+
+print("Olá, bem vindo ao sistema do Restaurante KYS!")
+while True:
+    iniciar = input(str("Digite S para começar: "))
+    if iniciar.lower() == "s":
+        menup()
+        break
